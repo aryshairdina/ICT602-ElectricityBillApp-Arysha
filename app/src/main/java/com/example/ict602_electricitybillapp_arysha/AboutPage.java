@@ -24,10 +24,10 @@ public class AboutPage extends AppCompatActivity {
         TextView aboutText = findViewById(R.id.aboutText);
         aboutText.setText("Name: NUR ARYSHA IRDINA BINTI ZULKHAIREEE\n" +
                 "Student ID: 2023141161\n" +
-                "Course: ICT602 Mobile Technology and Development\n© 2025\nGitHub: https://github.com/aryshairdina/ElectricityBillApp-Arysha.git");
+                "Course: ICT602 Mobile Technology and Development\n© 2025\nGitHub: https://github.com/aryshairdina/ICT602-ElectricityBillApp-Arysha");
 
         aboutText.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/aryshairdina/ElectricityBillApp-Arysha.git"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/aryshairdina/ICT602-ElectricityBillApp-Arysha"));
             startActivity(browserIntent);
         });
 
