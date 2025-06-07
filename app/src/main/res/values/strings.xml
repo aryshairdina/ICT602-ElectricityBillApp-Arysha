@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Electricity Bill Application</string>
+    <string name="select_month">Select Month:</string>
+    <string name="enter_units">Units Used (kWh):</string>
+    <string name="enter_rebate">Rebate Percentage (0–5%):</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_view">View Monthly History</string>
+    <string name="btn_about">About</string>
+    <string name="list_title">Monthly Electricity Bills List</string>
+</resources>
