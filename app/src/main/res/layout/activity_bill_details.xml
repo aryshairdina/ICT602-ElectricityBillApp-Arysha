@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_blue"
+    android:background="@color/background"
     android:padding="16dp">
 
     <LinearLayout
@@ -24,7 +24,7 @@
             android:text="Electricity Bill Summary"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/dark_blue"
+            android:textColor="@color/dark_red"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
             android:gravity="center"
@@ -35,7 +35,7 @@
             android:id="@+id/detailText"
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
-            android:textColor="@color/dark_blue"
+            android:textColor="@color/dark_red"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

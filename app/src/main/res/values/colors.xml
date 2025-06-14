@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background_blue">#C8F3FB</color>
-    <color name="dark_blue">#1565C0</color>
+    <color name="background">#d6d3cf</color>
+    <color name="dark_red">#a73227</color>
     <color name="button_text">#FFFFFF</color>
     <color name="text_dark">#0D47A1</color>
     <color name="white">#FFFFFF</color>

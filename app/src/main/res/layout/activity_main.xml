@@ -1,116 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/background_blue">
+    android:fitsSystemWindows="true">
 
+    <!-- Custom Title Bar -->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/dark_red"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnAbout"
+            android:contentDescription="@string/btn_about"
+            android:background="@drawable/user"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="6dp"
+            android:scaleType="centerInside" />
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="16dp">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/app_name"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="@color/dark_blue"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:text="@string/select_month"
+                android:textColor="@color/dark_red"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <ImageButton
-                android:id="@+id/btnAbout"
-                android:src="@drawable/profile_icon"
-                android:contentDescription="@string/btn_about"
-                android:background="@android:color/transparent"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:scaleType="centerInside"/>
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/enter_units"
+                android:textColor="@color/dark_red"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editUnits"
+                android:hint="Enter unit used"
+                android:inputType="number"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/enter_rebate"
+                android:textColor="@color/dark_red"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editRebate"
+                android:hint="Enter rebate percentage"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:text="@string/btn_calculate"
+                android:textColor="@color/button_text"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_red" />
+
+            <Button
+                android:id="@+id/btnViewList"
+                android:text="@string/btn_view"
+                android:textColor="@color/button_text"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_red" />
+
+            <TextView
+                android:id="@+id/textResult"
+                android:textColor="@color/dark_red"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
-
-        <TextView
-            android:text="@string/select_month"
-            android:textColor="@color/dark_blue"
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Spinner
-            android:id="@+id/spinnerMonth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:minWidth="48dp" />
-
-        <TextView
-            android:text="@string/enter_units"
-            android:textColor="@color/dark_blue"
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/editUnits"
-            android:hint="Enter unit used"
-            android:inputType="number"
-            android:padding="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="@string/enter_rebate"
-            android:textColor="@color/dark_blue"
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/editRebate"
-            android:hint="Enter rebate percentage"
-            android:inputType="numberDecimal"
-            android:padding="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btnCalculate"
-            android:text="@string/btn_calculate"
-            android:textColor="@color/button_text"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_blue"/>
-
-        <TextView
-            android:id="@+id/textResult"
-            android:textColor="@color/dark_blue"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btnViewList"
-            android:text="@string/btn_view"
-            android:textColor="@color/button_text"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_blue"/>
-
-        <!-- Removed the old About button here -->
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>
