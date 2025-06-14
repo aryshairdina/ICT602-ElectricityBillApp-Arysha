@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <!-- Custom Title Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -36,7 +35,6 @@
 
     </LinearLayout>
 
-    <!-- Scrollable Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
